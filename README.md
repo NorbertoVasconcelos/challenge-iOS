@@ -1,4 +1,4 @@
-# ELSA Challenge doe Senior IOS Deveropers
+# ELSA Challenge for iOS Developers
 
 This is Elsa’s Coding Exercise. It allows Elsa to assess candidates’ ability to develop a simple app with quality code. Since it’s just a coding exercise, we value code quality above UI/UX.  The UI needs to be functional, it does not need to be fancy.
 
