@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		5A650392204AE6E600662973 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A650391204AE6E600662973 /* AppDelegate.swift */; };
-		5A650394204AE6E600662973 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A650393204AE6E600662973 /* ViewController.swift */; };
 		5A650397204AE6E600662973 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A650395204AE6E600662973 /* Main.storyboard */; };
 		5A65039A204AE6E600662973 /* challenge_iOSDev.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5A650398204AE6E600662973 /* challenge_iOSDev.xcdatamodeld */; };
 		5A65039C204AE6E600662973 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5A65039B204AE6E600662973 /* Assets.xcassets */; };
@@ -16,6 +15,9 @@
 		5A6503AA204AE6E600662973 /* challenge_iOSDevTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A6503A9204AE6E600662973 /* challenge_iOSDevTests.swift */; };
 		5A6503B5204AE6E600662973 /* challenge_iOSDevUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A6503B4204AE6E600662973 /* challenge_iOSDevUITests.swift */; };
 		5A6503C8204AEB1200662973 /* ViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A6503C7204AEB1200662973 /* ViewModelType.swift */; };
+		5A6503CB204AEC4700662973 /* NotesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A6503CA204AEC4700662973 /* NotesViewController.swift */; };
+		5A6503CD204AEEBA00662973 /* CreateNoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A6503CC204AEEBA00662973 /* CreateNoteViewController.swift */; };
+		5A6503CF204AEECA00662973 /* DetailNoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A6503CE204AEECA00662973 /* DetailNoteViewController.swift */; };
 		73F7B879DCE05C8D83862B82 /* Pods_challenge_iOSDevTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23AABBB04A23EC6860860B38 /* Pods_challenge_iOSDevTests.framework */; };
 		7C69DD9A35A963EC571D5CE1 /* Pods_challenge_iOSDev.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2F995F5B24A68A2A71F0ACA /* Pods_challenge_iOSDev.framework */; };
 /* End PBXBuildFile section */
@@ -41,7 +43,6 @@
 		23AABBB04A23EC6860860B38 /* Pods_challenge_iOSDevTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_challenge_iOSDevTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A65038E204AE6E600662973 /* challenge-iOSDev.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "challenge-iOSDev.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A650391204AE6E600662973 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		5A650393204AE6E600662973 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		5A650396204AE6E600662973 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5A650399204AE6E600662973 /* challenge_iOSDev.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = challenge_iOSDev.xcdatamodel; sourceTree = "<group>"; };
 		5A65039B204AE6E600662973 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -54,6 +55,9 @@
 		5A6503B4204AE6E600662973 /* challenge_iOSDevUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = challenge_iOSDevUITests.swift; sourceTree = "<group>"; };
 		5A6503B6204AE6E600662973 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5A6503C7204AEB1200662973 /* ViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelType.swift; sourceTree = "<group>"; };
+		5A6503CA204AEC4700662973 /* NotesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesViewController.swift; sourceTree = "<group>"; };
+		5A6503CC204AEEBA00662973 /* CreateNoteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateNoteViewController.swift; sourceTree = "<group>"; };
+		5A6503CE204AEECA00662973 /* DetailNoteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailNoteViewController.swift; sourceTree = "<group>"; };
 		A2C9C4E0E91E6148B8544C2F /* Pods-challenge-iOSDev.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-challenge-iOSDev.release.xcconfig"; path = "Pods/Target Support Files/Pods-challenge-iOSDev/Pods-challenge-iOSDev.release.xcconfig"; sourceTree = "<group>"; };
 		BF07F357780E6F416D4FD8B5 /* Pods-challenge-iOSDevTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-challenge-iOSDevTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-challenge-iOSDevTests/Pods-challenge-iOSDevTests.release.xcconfig"; sourceTree = "<group>"; };
 		D3C90616E93EC7398D49E178 /* Pods-challenge-iOSDevTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-challenge-iOSDevTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-challenge-iOSDevTests/Pods-challenge-iOSDevTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -126,7 +130,6 @@
 				5A6503C3204AEA4800662973 /* Scenes */,
 				5A6503C2204AEA2100662973 /* Common */,
 				5A650391204AE6E600662973 /* AppDelegate.swift */,
-				5A650393204AE6E600662973 /* ViewController.swift */,
 				5A650395204AE6E600662973 /* Main.storyboard */,
 				5A65039B204AE6E600662973 /* Assets.xcassets */,
 				5A65039D204AE6E600662973 /* LaunchScreen.storyboard */,
@@ -175,6 +178,7 @@
 		5A6503C4204AEA6B00662973 /* CreateNote */ = {
 			isa = PBXGroup;
 			children = (
+				5A6503CC204AEEBA00662973 /* CreateNoteViewController.swift */,
 			);
 			path = CreateNote;
 			sourceTree = "<group>";
@@ -182,6 +186,7 @@
 		5A6503C5204AEAC600662973 /* DetailNote */ = {
 			isa = PBXGroup;
 			children = (
+				5A6503CE204AEECA00662973 /* DetailNoteViewController.swift */,
 			);
 			path = DetailNote;
 			sourceTree = "<group>";
@@ -189,6 +194,7 @@
 		5A6503C6204AEAD000662973 /* AllNotes */ = {
 			isa = PBXGroup;
 			children = (
+				5A6503CA204AEC4700662973 /* NotesViewController.swift */,
 			);
 			path = AllNotes;
 			sourceTree = "<group>";
@@ -445,9 +451,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				5A6503C8204AEB1200662973 /* ViewModelType.swift in Sources */,
-				5A650394204AE6E600662973 /* ViewController.swift in Sources */,
+				5A6503CB204AEC4700662973 /* NotesViewController.swift in Sources */,
 				5A650392204AE6E600662973 /* AppDelegate.swift in Sources */,
+				5A6503CD204AEEBA00662973 /* CreateNoteViewController.swift in Sources */,
 				5A65039A204AE6E600662973 /* challenge_iOSDev.xcdatamodeld in Sources */,
+				5A6503CF204AEECA00662973 /* DetailNoteViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
