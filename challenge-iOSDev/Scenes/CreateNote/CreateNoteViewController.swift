@@ -11,6 +11,7 @@ import RxSwift
 
 class CreateNoteViewController: UIViewController {
 
+    @IBOutlet weak var tvTitle: UITextField!
     @IBOutlet weak var tvSpeech: UITextView!
     @IBOutlet weak var btnSaveNote: UIBarButtonItem!
     @IBOutlet weak var btnRecord: UIButton!
@@ -33,6 +34,7 @@ class CreateNoteViewController: UIViewController {
             [weak self] _ in
             self?.tvSpeech.endEditing(true)
         })
+        .disposed(by: disposeBag)
         
         keyboardToolbar.items = [btn]
         tvSpeech.inputAccessoryView = keyboardToolbar
@@ -46,7 +48,7 @@ class CreateNoteViewController: UIViewController {
                                               saveTrigger: btnSaveNote.rx.tap.asDriver(),
                                               recordTrigger: btnRecord.rx.tap.asDriver(),
                                               pauseTrigger: btnPause.rx.tap.asDriver(),
-                                              title: tvSpeech.rx.text.orEmpty.asDriver(),
+                                              title: tvTitle.rx.text.orEmpty.asDriver(),
                                               details: tvSpeech.rx.text.orEmpty.asDriver())
         
         let output = viewModel?.transform(input: input)

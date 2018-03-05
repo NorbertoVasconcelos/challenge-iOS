@@ -17,6 +17,7 @@ final class CreateNoteViewModel: ViewModelType {
     private let audioRecorder: AudioRecorder
     private let geolocationService = GeolocationService.instance
     private var location: Location?
+    private var text: String = ""
     private let disposeBag = DisposeBag()
     
     init(createNoteUseCase: NotesUseCaseProtocol, navigator: CreateNoteNavigator) {
@@ -63,7 +64,7 @@ final class CreateNoteViewModel: ViewModelType {
         }).disposed(by: disposeBag)
         
         let recording = input.recordTrigger.do(onNext: audioRecorder.start)
-        let pause = input.pauseTrigger.do(onNext:  audioRecorder.pause)
+        let pause = input.pauseTrigger.do(onNext: audioRecorder.stop)
         
         let dismiss = Driver.of(save, input.cancelTrigger)
             .merge()

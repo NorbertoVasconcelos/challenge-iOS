@@ -145,7 +145,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="zRB-T6-VkG">
-                                <rect key="frame" x="16" y="80" width="343" height="519"/>
+                                <rect key="frame" x="16" y="128" width="343" height="471"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -168,15 +168,27 @@
                                     <constraint firstAttribute="height" constant="60" id="EBQ-RL-Hzz"/>
                                 </constraints>
                             </stackView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="My Note" borderStyle="roundedRect" placeholder="Title" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dbO-fP-luO">
+                                <rect key="frame" x="16" y="80" width="343" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="CGa-co-NDL"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="zRB-T6-VkG" firstAttribute="leading" secondItem="6tf-3h-3r8" secondAttribute="leading" constant="16" id="6cJ-zh-0bU"/>
+                            <constraint firstItem="zRB-T6-VkG" firstAttribute="top" secondItem="dbO-fP-luO" secondAttribute="bottom" constant="8" id="7ih-Rz-F20"/>
                             <constraint firstItem="bK1-39-dfT" firstAttribute="top" secondItem="zRB-T6-VkG" secondAttribute="bottom" constant="8" id="Di9-Pc-lLd"/>
                             <constraint firstItem="bK1-39-dfT" firstAttribute="bottom" secondItem="6tf-3h-3r8" secondAttribute="bottom" id="MTJ-oY-KMf"/>
+                            <constraint firstItem="dbO-fP-luO" firstAttribute="leading" secondItem="6tf-3h-3r8" secondAttribute="leading" constant="16" id="MbH-i2-MXY"/>
                             <constraint firstItem="bK1-39-dfT" firstAttribute="trailing" secondItem="6tf-3h-3r8" secondAttribute="trailing" id="YAT-Jl-4gS"/>
-                            <constraint firstItem="zRB-T6-VkG" firstAttribute="top" secondItem="6tf-3h-3r8" secondAttribute="top" constant="16" id="e23-e8-orP"/>
                             <constraint firstItem="bK1-39-dfT" firstAttribute="leading" secondItem="6tf-3h-3r8" secondAttribute="leading" id="pGi-9b-q4e"/>
+                            <constraint firstItem="6tf-3h-3r8" firstAttribute="trailing" secondItem="dbO-fP-luO" secondAttribute="trailing" constant="16" id="vjH-zJ-SoT"/>
+                            <constraint firstItem="dbO-fP-luO" firstAttribute="top" secondItem="6tf-3h-3r8" secondAttribute="top" constant="16" id="vwy-Hz-wLl"/>
                             <constraint firstItem="6tf-3h-3r8" firstAttribute="trailing" secondItem="zRB-T6-VkG" secondAttribute="trailing" constant="16" id="whC-Af-n8s"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6tf-3h-3r8"/>
@@ -189,6 +201,7 @@
                         <outlet property="btnRecord" destination="CzR-sE-YPw" id="zsx-I8-RuU"/>
                         <outlet property="btnSaveNote" destination="2nj-10-Vlq" id="aXg-Oq-Hrq"/>
                         <outlet property="tvSpeech" destination="zRB-T6-VkG" id="dZT-SS-O0Y"/>
+                        <outlet property="tvTitle" destination="dbO-fP-luO" id="w2k-Ug-5d4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uXL-nC-Qrg" userLabel="First Responder" sceneMemberID="firstResponder"/>
