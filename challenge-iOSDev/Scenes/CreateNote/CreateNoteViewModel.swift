@@ -9,17 +9,30 @@
 import Foundation
 import RxSwift
 import RxCocoa
+import CoreLocation
 
 final class CreateNoteViewModel: ViewModelType {
     private let createNoteUseCase: NotesUseCaseProtocol
     private let navigator: CreateNoteNavigator
     private let audioRecorder: AudioRecorder
+    private let geolocationService = GeolocationService.instance
+    private var location: Location?
     private let disposeBag = DisposeBag()
     
     init(createNoteUseCase: NotesUseCaseProtocol, navigator: CreateNoteNavigator) {
         self.createNoteUseCase = createNoteUseCase
         self.navigator = navigator
         self.audioRecorder = AudioRecorder()
+
+        
+        GeolocationService
+            .instance
+            .location
+            .asObservable()
+            .subscribe({ [weak self] l2D in
+                self?.location = Location(location: l2D.element!)
+            })
+            .disposed(by: disposeBag)
     }
     
     func transform(input: Input) -> Output {
@@ -32,10 +45,12 @@ final class CreateNoteViewModel: ViewModelType {
             return $0.count > 0 && !$1
         }
         
-        let save = input.saveTrigger.withLatestFrom(titleAndDetails)
-            .map {
-                return Note(body: $0[1], title: $0[0])
-            }
+        let createdNote = Driver<Note>.combineLatest(titleAndDetails, geolocationService.location) {
+            return Note(body: $0[1], title: $0[0], location: $1)
+        }
+        
+        
+        let save = input.saveTrigger.withLatestFrom(createdNote)
             .flatMapLatest { [weak self] in
                 return (self?.createNoteUseCase.save(note: $0)
                     .trackActivity(activityIndicator)

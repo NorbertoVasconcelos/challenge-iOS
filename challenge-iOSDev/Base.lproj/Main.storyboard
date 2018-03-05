@@ -71,7 +71,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Xo1-U7-MJd">
-                                <rect key="frame" x="16" y="80" width="343" height="511"/>
+                                <rect key="frame" x="16" y="80" width="343" height="471"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <inset key="scrollIndicatorInsets" minX="0.0" minY="16" maxX="0.0" maxY="0.0"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -85,16 +85,39 @@
                                 </constraints>
                                 <state key="normal" title="Listen to note"/>
                             </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="dmp-Gp-03c">
+                                <rect key="frame" x="16" y="559" width="343" height="40"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IJB-Yr-O8e">
+                                        <rect key="frame" x="0.0" y="0.0" width="171.5" height="40"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6X8-LT-MjB">
+                                        <rect key="frame" x="171.5" y="0.0" width="171.5" height="40"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="XLM-hT-zFb"/>
+                                </constraints>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="98Y-La-Z63" firstAttribute="top" secondItem="Xo1-U7-MJd" secondAttribute="bottom" constant="16" id="2js-K9-Yxr"/>
                             <constraint firstItem="DZc-3X-Zbr" firstAttribute="trailing" secondItem="Xo1-U7-MJd" secondAttribute="trailing" constant="16" id="6YR-sl-hS6"/>
                             <constraint firstItem="98Y-La-Z63" firstAttribute="bottom" secondItem="DZc-3X-Zbr" secondAttribute="bottom" id="BN5-kv-WaS"/>
                             <constraint firstItem="Xo1-U7-MJd" firstAttribute="leading" secondItem="DZc-3X-Zbr" secondAttribute="leading" constant="16" id="Mie-go-mJN"/>
+                            <constraint firstItem="98Y-La-Z63" firstAttribute="top" secondItem="dmp-Gp-03c" secondAttribute="bottom" constant="8" id="frt-Uh-46I"/>
                             <constraint firstItem="98Y-La-Z63" firstAttribute="leading" secondItem="DZc-3X-Zbr" secondAttribute="leading" id="gC2-Mj-flB"/>
+                            <constraint firstItem="dmp-Gp-03c" firstAttribute="top" secondItem="Xo1-U7-MJd" secondAttribute="bottom" constant="8" id="gkc-2e-zIe"/>
+                            <constraint firstItem="dmp-Gp-03c" firstAttribute="leading" secondItem="DZc-3X-Zbr" secondAttribute="leading" constant="16" id="il0-gy-tX8"/>
                             <constraint firstItem="Xo1-U7-MJd" firstAttribute="top" secondItem="DZc-3X-Zbr" secondAttribute="top" constant="16" id="lxg-0Y-OBN"/>
                             <constraint firstItem="98Y-La-Z63" firstAttribute="trailing" secondItem="DZc-3X-Zbr" secondAttribute="trailing" id="vjY-3c-3dm"/>
+                            <constraint firstItem="DZc-3X-Zbr" firstAttribute="trailing" secondItem="dmp-Gp-03c" secondAttribute="trailing" constant="16" id="wjS-27-KkP"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="DZc-3X-Zbr"/>
                     </view>
@@ -104,6 +127,8 @@
                     <connections>
                         <outlet property="btnDeleteNote" destination="aUB-df-PRB" id="MtO-sJ-g65"/>
                         <outlet property="btnListen" destination="98Y-La-Z63" id="HVr-gA-dJC"/>
+                        <outlet property="lblLatitude" destination="IJB-Yr-O8e" id="j5T-Mb-Epu"/>
+                        <outlet property="lblLongitude" destination="6X8-LT-MjB" id="eP1-dB-rzb"/>
                         <outlet property="tvSpeech" destination="Xo1-U7-MJd" id="cRf-iK-MWL"/>
                     </connections>
                 </viewController>

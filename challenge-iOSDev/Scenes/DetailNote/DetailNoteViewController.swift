@@ -14,6 +14,8 @@ class DetailNoteViewController: UIViewController {
     @IBOutlet weak var btnListen: UIButton!
     @IBOutlet weak var btnDeleteNote: UIBarButtonItem!
     @IBOutlet weak var tvSpeech: UITextView!
+    @IBOutlet weak var lblLongitude: UILabel!
+    @IBOutlet weak var lblLatitude: UILabel!
     
     var viewModel: DetailNoteViewModel?
     private let disposeBag = DisposeBag()
@@ -34,6 +36,10 @@ class DetailNoteViewController: UIViewController {
             .asObservable()
             .subscribe(onNext: { [weak self] note in
                 self?.tvSpeech.text = note.body
+                let lat = Double(note.location.latitude).rounded(toPlaces: 3)
+                let lon = Double(note.location.longitude).rounded(toPlaces: 3)
+                self?.lblLatitude.text = "Lat: \(lat)"
+                self?.lblLongitude.text = "Lon: \(lon)"
             })
             .disposed(by: disposeBag)
         

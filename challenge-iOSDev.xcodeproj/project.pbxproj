@@ -38,9 +38,6 @@
 		5A650405204C6D6A00662973 /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A650404204C6D6A00662973 /* Repository.swift */; };
 		5A650408204C6D7500662973 /* NSManagedObjectContext+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A650406204C6D7500662973 /* NSManagedObjectContext+Ext.swift */; };
 		5A650409204C6D7500662973 /* Observable+Ext_CoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A650407204C6D7500662973 /* Observable+Ext_CoreData.swift */; };
-		5A65040D204C6D8200662973 /* CDLocation+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A65040A204C6D8200662973 /* CDLocation+Ext.swift */; };
-		5A65040E204C6D8200662973 /* CDLocation+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A65040B204C6D8200662973 /* CDLocation+CoreDataClass.swift */; };
-		5A65040F204C6D8200662973 /* CDLocation+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A65040C204C6D8200662973 /* CDLocation+CoreDataProperties.swift */; };
 		5A650412204C6D8B00662973 /* Persistable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A650410204C6D8B00662973 /* Persistable.swift */; };
 		5A650413204C6D8B00662973 /* DomainConvertibleType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A650411204C6D8B00662973 /* DomainConvertibleType.swift */; };
 		5A650417204C73C400662973 /* CDNote+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A650414204C73C400662973 /* CDNote+CoreDataClass.swift */; };
@@ -53,6 +50,9 @@
 		5A650424204D5C0200662973 /* DetailNoteViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A650423204D5C0200662973 /* DetailNoteViewModel.swift */; };
 		5A650426204D5C2400662973 /* DetailNoteNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A650425204D5C2400662973 /* DetailNoteNavigator.swift */; };
 		5A650428204D86D600662973 /* SpeechSynthesizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A650427204D86D600662973 /* SpeechSynthesizer.swift */; };
+		5A8D917F204D9CD4008CFC60 /* GeolocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A8D917E204D9CD4008CFC60 /* GeolocationService.swift */; };
+		5A8D9182204D9D37008CFC60 /* CLLocationManager+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A8D9181204D9D37008CFC60 /* CLLocationManager+Rx.swift */; };
+		5A8D9184204D9D8D008CFC60 /* RxCLLocationManagerDelegateProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A8D9183204D9D8D008CFC60 /* RxCLLocationManagerDelegateProxy.swift */; };
 		73F7B879DCE05C8D83862B82 /* Pods_challenge_iOSDevTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23AABBB04A23EC6860860B38 /* Pods_challenge_iOSDevTests.framework */; };
 		7C69DD9A35A963EC571D5CE1 /* Pods_challenge_iOSDev.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2F995F5B24A68A2A71F0ACA /* Pods_challenge_iOSDev.framework */; };
 /* End PBXBuildFile section */
@@ -113,9 +113,6 @@
 		5A650404204C6D6A00662973 /* Repository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
 		5A650406204C6D7500662973 /* NSManagedObjectContext+Ext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSManagedObjectContext+Ext.swift"; sourceTree = "<group>"; };
 		5A650407204C6D7500662973 /* Observable+Ext_CoreData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Observable+Ext_CoreData.swift"; sourceTree = "<group>"; };
-		5A65040A204C6D8200662973 /* CDLocation+Ext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CDLocation+Ext.swift"; sourceTree = "<group>"; };
-		5A65040B204C6D8200662973 /* CDLocation+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CDLocation+CoreDataClass.swift"; sourceTree = "<group>"; };
-		5A65040C204C6D8200662973 /* CDLocation+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CDLocation+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		5A650410204C6D8B00662973 /* Persistable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Persistable.swift; sourceTree = "<group>"; };
 		5A650411204C6D8B00662973 /* DomainConvertibleType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DomainConvertibleType.swift; sourceTree = "<group>"; };
 		5A650414204C73C400662973 /* CDNote+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CDNote+CoreDataClass.swift"; sourceTree = "<group>"; };
@@ -128,6 +125,9 @@
 		5A650423204D5C0200662973 /* DetailNoteViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailNoteViewModel.swift; sourceTree = "<group>"; };
 		5A650425204D5C2400662973 /* DetailNoteNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailNoteNavigator.swift; sourceTree = "<group>"; };
 		5A650427204D86D600662973 /* SpeechSynthesizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechSynthesizer.swift; sourceTree = "<group>"; };
+		5A8D917E204D9CD4008CFC60 /* GeolocationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeolocationService.swift; sourceTree = "<group>"; };
+		5A8D9181204D9D37008CFC60 /* CLLocationManager+Rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CLLocationManager+Rx.swift"; sourceTree = "<group>"; };
+		5A8D9183204D9D8D008CFC60 /* RxCLLocationManagerDelegateProxy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxCLLocationManagerDelegateProxy.swift; sourceTree = "<group>"; };
 		A2C9C4E0E91E6148B8544C2F /* Pods-challenge-iOSDev.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-challenge-iOSDev.release.xcconfig"; path = "Pods/Target Support Files/Pods-challenge-iOSDev/Pods-challenge-iOSDev.release.xcconfig"; sourceTree = "<group>"; };
 		BF07F357780E6F416D4FD8B5 /* Pods-challenge-iOSDevTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-challenge-iOSDevTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-challenge-iOSDevTests/Pods-challenge-iOSDevTests.release.xcconfig"; sourceTree = "<group>"; };
 		D3C90616E93EC7398D49E178 /* Pods-challenge-iOSDevTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-challenge-iOSDevTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-challenge-iOSDevTests/Pods-challenge-iOSDevTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -284,6 +284,7 @@
 		5A6503C9204AEB6200662973 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				5A8D9180204D9D1C008CFC60 /* Location */,
 				5A6503E8204B123E00662973 /* ActivityIndicator.swift */,
 				5A6503E7204B123E00662973 /* ErrorTracker.swift */,
 				5A6503E5204B123E00662973 /* Observable+Ext.swift */,
@@ -347,9 +348,6 @@
 				5A650414204C73C400662973 /* CDNote+CoreDataClass.swift */,
 				5A650415204C73C400662973 /* CDNote+CoreDataProperties.swift */,
 				5A650416204C73C400662973 /* CDNote+Ext.swift */,
-				5A65040B204C6D8200662973 /* CDLocation+CoreDataClass.swift */,
-				5A65040C204C6D8200662973 /* CDLocation+CoreDataProperties.swift */,
-				5A65040A204C6D8200662973 /* CDLocation+Ext.swift */,
 				5A6503F8204C6C5600662973 /* Conversion */,
 			);
 			path = Entities;
@@ -389,6 +387,16 @@
 				5A6503FE204C6D6200662973 /* NSManagedObjectContext+Rx.swift */,
 			);
 			path = RxCoreData;
+			sourceTree = "<group>";
+		};
+		5A8D9180204D9D1C008CFC60 /* Location */ = {
+			isa = PBXGroup;
+			children = (
+				5A8D917E204D9CD4008CFC60 /* GeolocationService.swift */,
+				5A8D9181204D9D37008CFC60 /* CLLocationManager+Rx.swift */,
+				5A8D9183204D9D8D008CFC60 /* RxCLLocationManagerDelegateProxy.swift */,
+			);
+			path = Location;
 			sourceTree = "<group>";
 		};
 		C83ACE2256C5C04E06D77338 /* Pods */ = {
@@ -637,19 +645,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				5A6503C8204AEB1200662973 /* ViewModelType.swift in Sources */,
+				5A8D917F204D9CD4008CFC60 /* GeolocationService.swift in Sources */,
 				5A650426204D5C2400662973 /* DetailNoteNavigator.swift in Sources */,
+				5A8D9184204D9D8D008CFC60 /* RxCLLocationManagerDelegateProxy.swift in Sources */,
 				5A650412204C6D8B00662973 /* Persistable.swift in Sources */,
 				5A650418204C73C400662973 /* CDNote+CoreDataProperties.swift in Sources */,
 				5A650424204D5C0200662973 /* DetailNoteViewModel.swift in Sources */,
 				5A6503D1204AF11B00662973 /* NotesViewModel.swift in Sources */,
 				5A650408204C6D7500662973 /* NSManagedObjectContext+Ext.swift in Sources */,
 				5A6503CB204AEC4700662973 /* NotesViewController.swift in Sources */,
+				5A8D9182204D9D37008CFC60 /* CLLocationManager+Rx.swift in Sources */,
 				5A6503F3204C608000662973 /* Application.swift in Sources */,
 				5A6503EB204B123E00662973 /* ErrorTracker.swift in Sources */,
 				5A6503DE204AF54E00662973 /* UseCaseProvider.swift in Sources */,
 				5A6503F0204B164700662973 /* NoteTableViewCell.swift in Sources */,
-				5A65040E204C6D8200662973 /* CDLocation+CoreDataClass.swift in Sources */,
-				5A65040F204C6D8200662973 /* CDLocation+CoreDataProperties.swift in Sources */,
 				5A6503D9204AF3A700662973 /* NotesNavigator.swift in Sources */,
 				5A650419204C73C400662973 /* CDNote+Ext.swift in Sources */,
 				5A650409204C6D7500662973 /* Observable+Ext_CoreData.swift in Sources */,
@@ -671,7 +680,6 @@
 				5A6503CD204AEEBA00662973 /* CreateNoteViewController.swift in Sources */,
 				5A650417204C73C400662973 /* CDNote+CoreDataClass.swift in Sources */,
 				5A650428204D86D600662973 /* SpeechSynthesizer.swift in Sources */,
-				5A65040D204C6D8200662973 /* CDLocation+Ext.swift in Sources */,
 				5A6503CF204AEECA00662973 /* DetailNoteViewController.swift in Sources */,
 				5A6503E9204B123E00662973 /* Observable+Ext.swift in Sources */,
 				5A6503E2204AF5BF00662973 /* NotesUseCase.swift in Sources */,
