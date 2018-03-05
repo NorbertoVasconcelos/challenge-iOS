@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		5A650392204AE6E600662973 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A650391204AE6E600662973 /* AppDelegate.swift */; };
 		5A650397204AE6E600662973 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A650395204AE6E600662973 /* Main.storyboard */; };
-		5A65039A204AE6E600662973 /* challenge_iOSDev.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5A650398204AE6E600662973 /* challenge_iOSDev.xcdatamodeld */; };
 		5A65039C204AE6E600662973 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5A65039B204AE6E600662973 /* Assets.xcassets */; };
 		5A65039F204AE6E600662973 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A65039D204AE6E600662973 /* LaunchScreen.storyboard */; };
 		5A6503AA204AE6E600662973 /* challenge_iOSDevTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A6503A9204AE6E600662973 /* challenge_iOSDevTests.swift */; };
@@ -18,6 +17,42 @@
 		5A6503CB204AEC4700662973 /* NotesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A6503CA204AEC4700662973 /* NotesViewController.swift */; };
 		5A6503CD204AEEBA00662973 /* CreateNoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A6503CC204AEEBA00662973 /* CreateNoteViewController.swift */; };
 		5A6503CF204AEECA00662973 /* DetailNoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A6503CE204AEECA00662973 /* DetailNoteViewController.swift */; };
+		5A6503D1204AF11B00662973 /* NotesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A6503D0204AF11B00662973 /* NotesViewModel.swift */; };
+		5A6503D3204AF1A000662973 /* NoteItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A6503D2204AF19F00662973 /* NoteItemViewModel.swift */; };
+		5A6503D9204AF3A700662973 /* NotesNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A6503D8204AF3A700662973 /* NotesNavigator.swift */; };
+		5A6503DE204AF54E00662973 /* UseCaseProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A6503DD204AF54E00662973 /* UseCaseProvider.swift */; };
+		5A6503E0204AF59700662973 /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A6503DF204AF59700662973 /* Note.swift */; };
+		5A6503E2204AF5BF00662973 /* NotesUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A6503E1204AF5BF00662973 /* NotesUseCase.swift */; };
+		5A6503E4204AF66000662973 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A6503E3204AF66000662973 /* Location.swift */; };
+		5A6503E9204B123E00662973 /* Observable+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A6503E5204B123E00662973 /* Observable+Ext.swift */; };
+		5A6503EA204B123E00662973 /* Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A6503E6204B123E00662973 /* Reusable.swift */; };
+		5A6503EB204B123E00662973 /* ErrorTracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A6503E7204B123E00662973 /* ErrorTracker.swift */; };
+		5A6503EC204B123E00662973 /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A6503E8204B123E00662973 /* ActivityIndicator.swift */; };
+		5A6503F0204B164700662973 /* NoteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A6503EE204B164700662973 /* NoteTableViewCell.swift */; };
+		5A6503F1204B164700662973 /* NoteTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5A6503EF204B164700662973 /* NoteTableViewCell.xib */; };
+		5A6503F3204C608000662973 /* Application.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A6503F2204C608000662973 /* Application.swift */; };
+		5A6503FD204C6D5300662973 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A6503FC204C6D5300662973 /* CoreDataStack.swift */; };
+		5A650401204C6D6200662973 /* NSManagedObjectContext+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A6503FE204C6D6200662973 /* NSManagedObjectContext+Rx.swift */; };
+		5A650402204C6D6200662973 /* ContextScheduler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A6503FF204C6D6200662973 /* ContextScheduler.swift */; };
+		5A650403204C6D6200662973 /* FetchedResultsControllerEntityObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A650400204C6D6200662973 /* FetchedResultsControllerEntityObserver.swift */; };
+		5A650405204C6D6A00662973 /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A650404204C6D6A00662973 /* Repository.swift */; };
+		5A650408204C6D7500662973 /* NSManagedObjectContext+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A650406204C6D7500662973 /* NSManagedObjectContext+Ext.swift */; };
+		5A650409204C6D7500662973 /* Observable+Ext_CoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A650407204C6D7500662973 /* Observable+Ext_CoreData.swift */; };
+		5A65040D204C6D8200662973 /* CDLocation+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A65040A204C6D8200662973 /* CDLocation+Ext.swift */; };
+		5A65040E204C6D8200662973 /* CDLocation+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A65040B204C6D8200662973 /* CDLocation+CoreDataClass.swift */; };
+		5A65040F204C6D8200662973 /* CDLocation+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A65040C204C6D8200662973 /* CDLocation+CoreDataProperties.swift */; };
+		5A650412204C6D8B00662973 /* Persistable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A650410204C6D8B00662973 /* Persistable.swift */; };
+		5A650413204C6D8B00662973 /* DomainConvertibleType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A650411204C6D8B00662973 /* DomainConvertibleType.swift */; };
+		5A650417204C73C400662973 /* CDNote+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A650414204C73C400662973 /* CDNote+CoreDataClass.swift */; };
+		5A650418204C73C400662973 /* CDNote+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A650415204C73C400662973 /* CDNote+CoreDataProperties.swift */; };
+		5A650419204C73C400662973 /* CDNote+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A650416204C73C400662973 /* CDNote+Ext.swift */; };
+		5A65041C204CA2E800662973 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5A65041A204CA2E800662973 /* Model.xcdatamodeld */; };
+		5A65041E204CB45800662973 /* CreateNoteViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A65041D204CB45800662973 /* CreateNoteViewModel.swift */; };
+		5A650420204CB46D00662973 /* CreateNoteNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A65041F204CB46D00662973 /* CreateNoteNavigator.swift */; };
+		5A650422204D4DDF00662973 /* AudioRecorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A650421204D4DDF00662973 /* AudioRecorder.swift */; };
+		5A650424204D5C0200662973 /* DetailNoteViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A650423204D5C0200662973 /* DetailNoteViewModel.swift */; };
+		5A650426204D5C2400662973 /* DetailNoteNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A650425204D5C2400662973 /* DetailNoteNavigator.swift */; };
+		5A650428204D86D600662973 /* SpeechSynthesizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A650427204D86D600662973 /* SpeechSynthesizer.swift */; };
 		73F7B879DCE05C8D83862B82 /* Pods_challenge_iOSDevTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23AABBB04A23EC6860860B38 /* Pods_challenge_iOSDevTests.framework */; };
 		7C69DD9A35A963EC571D5CE1 /* Pods_challenge_iOSDev.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2F995F5B24A68A2A71F0ACA /* Pods_challenge_iOSDev.framework */; };
 /* End PBXBuildFile section */
@@ -44,7 +79,6 @@
 		5A65038E204AE6E600662973 /* challenge-iOSDev.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "challenge-iOSDev.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A650391204AE6E600662973 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5A650396204AE6E600662973 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		5A650399204AE6E600662973 /* challenge_iOSDev.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = challenge_iOSDev.xcdatamodel; sourceTree = "<group>"; };
 		5A65039B204AE6E600662973 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5A65039E204AE6E600662973 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5A6503A0204AE6E600662973 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -58,6 +92,42 @@
 		5A6503CA204AEC4700662973 /* NotesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesViewController.swift; sourceTree = "<group>"; };
 		5A6503CC204AEEBA00662973 /* CreateNoteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateNoteViewController.swift; sourceTree = "<group>"; };
 		5A6503CE204AEECA00662973 /* DetailNoteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailNoteViewController.swift; sourceTree = "<group>"; };
+		5A6503D0204AF11B00662973 /* NotesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesViewModel.swift; sourceTree = "<group>"; };
+		5A6503D2204AF19F00662973 /* NoteItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteItemViewModel.swift; sourceTree = "<group>"; };
+		5A6503D8204AF3A700662973 /* NotesNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesNavigator.swift; sourceTree = "<group>"; };
+		5A6503DD204AF54E00662973 /* UseCaseProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UseCaseProvider.swift; sourceTree = "<group>"; };
+		5A6503DF204AF59700662973 /* Note.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
+		5A6503E1204AF5BF00662973 /* NotesUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesUseCase.swift; sourceTree = "<group>"; };
+		5A6503E3204AF66000662973 /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
+		5A6503E5204B123E00662973 /* Observable+Ext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Observable+Ext.swift"; sourceTree = "<group>"; };
+		5A6503E6204B123E00662973 /* Reusable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reusable.swift; sourceTree = "<group>"; };
+		5A6503E7204B123E00662973 /* ErrorTracker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorTracker.swift; sourceTree = "<group>"; };
+		5A6503E8204B123E00662973 /* ActivityIndicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
+		5A6503EE204B164700662973 /* NoteTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteTableViewCell.swift; sourceTree = "<group>"; };
+		5A6503EF204B164700662973 /* NoteTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NoteTableViewCell.xib; sourceTree = "<group>"; };
+		5A6503F2204C608000662973 /* Application.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Application.swift; sourceTree = "<group>"; };
+		5A6503FC204C6D5300662973 /* CoreDataStack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
+		5A6503FE204C6D6200662973 /* NSManagedObjectContext+Rx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSManagedObjectContext+Rx.swift"; sourceTree = "<group>"; };
+		5A6503FF204C6D6200662973 /* ContextScheduler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContextScheduler.swift; sourceTree = "<group>"; };
+		5A650400204C6D6200662973 /* FetchedResultsControllerEntityObserver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FetchedResultsControllerEntityObserver.swift; sourceTree = "<group>"; };
+		5A650404204C6D6A00662973 /* Repository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
+		5A650406204C6D7500662973 /* NSManagedObjectContext+Ext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSManagedObjectContext+Ext.swift"; sourceTree = "<group>"; };
+		5A650407204C6D7500662973 /* Observable+Ext_CoreData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Observable+Ext_CoreData.swift"; sourceTree = "<group>"; };
+		5A65040A204C6D8200662973 /* CDLocation+Ext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CDLocation+Ext.swift"; sourceTree = "<group>"; };
+		5A65040B204C6D8200662973 /* CDLocation+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CDLocation+CoreDataClass.swift"; sourceTree = "<group>"; };
+		5A65040C204C6D8200662973 /* CDLocation+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CDLocation+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		5A650410204C6D8B00662973 /* Persistable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Persistable.swift; sourceTree = "<group>"; };
+		5A650411204C6D8B00662973 /* DomainConvertibleType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DomainConvertibleType.swift; sourceTree = "<group>"; };
+		5A650414204C73C400662973 /* CDNote+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CDNote+CoreDataClass.swift"; sourceTree = "<group>"; };
+		5A650415204C73C400662973 /* CDNote+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CDNote+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		5A650416204C73C400662973 /* CDNote+Ext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CDNote+Ext.swift"; sourceTree = "<group>"; };
+		5A65041B204CA2E800662973 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		5A65041D204CB45800662973 /* CreateNoteViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateNoteViewModel.swift; sourceTree = "<group>"; };
+		5A65041F204CB46D00662973 /* CreateNoteNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateNoteNavigator.swift; sourceTree = "<group>"; };
+		5A650421204D4DDF00662973 /* AudioRecorder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioRecorder.swift; sourceTree = "<group>"; };
+		5A650423204D5C0200662973 /* DetailNoteViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailNoteViewModel.swift; sourceTree = "<group>"; };
+		5A650425204D5C2400662973 /* DetailNoteNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailNoteNavigator.swift; sourceTree = "<group>"; };
+		5A650427204D86D600662973 /* SpeechSynthesizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechSynthesizer.swift; sourceTree = "<group>"; };
 		A2C9C4E0E91E6148B8544C2F /* Pods-challenge-iOSDev.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-challenge-iOSDev.release.xcconfig"; path = "Pods/Target Support Files/Pods-challenge-iOSDev/Pods-challenge-iOSDev.release.xcconfig"; sourceTree = "<group>"; };
 		BF07F357780E6F416D4FD8B5 /* Pods-challenge-iOSDevTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-challenge-iOSDevTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-challenge-iOSDevTests/Pods-challenge-iOSDevTests.release.xcconfig"; sourceTree = "<group>"; };
 		D3C90616E93EC7398D49E178 /* Pods-challenge-iOSDevTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-challenge-iOSDevTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-challenge-iOSDevTests/Pods-challenge-iOSDevTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -126,15 +196,17 @@
 		5A650390204AE6E600662973 /* challenge-iOSDev */ = {
 			isa = PBXGroup;
 			children = (
+				5A6503F6204C6C2A00662973 /* CoreDataPlatform */,
+				5A6503DA204AF50C00662973 /* Domain */,
 				5A6503C9204AEB6200662973 /* Utils */,
 				5A6503C3204AEA4800662973 /* Scenes */,
 				5A6503C2204AEA2100662973 /* Common */,
 				5A650391204AE6E600662973 /* AppDelegate.swift */,
+				5A6503F2204C608000662973 /* Application.swift */,
 				5A650395204AE6E600662973 /* Main.storyboard */,
 				5A65039B204AE6E600662973 /* Assets.xcassets */,
 				5A65039D204AE6E600662973 /* LaunchScreen.storyboard */,
 				5A6503A0204AE6E600662973 /* Info.plist */,
-				5A650398204AE6E600662973 /* challenge_iOSDev.xcdatamodeld */,
 			);
 			path = "challenge-iOSDev";
 			sourceTree = "<group>";
@@ -179,6 +251,9 @@
 			isa = PBXGroup;
 			children = (
 				5A6503CC204AEEBA00662973 /* CreateNoteViewController.swift */,
+				5A65041D204CB45800662973 /* CreateNoteViewModel.swift */,
+				5A65041F204CB46D00662973 /* CreateNoteNavigator.swift */,
+				5A650421204D4DDF00662973 /* AudioRecorder.swift */,
 			);
 			path = CreateNote;
 			sourceTree = "<group>";
@@ -187,6 +262,9 @@
 			isa = PBXGroup;
 			children = (
 				5A6503CE204AEECA00662973 /* DetailNoteViewController.swift */,
+				5A650423204D5C0200662973 /* DetailNoteViewModel.swift */,
+				5A650425204D5C2400662973 /* DetailNoteNavigator.swift */,
+				5A650427204D86D600662973 /* SpeechSynthesizer.swift */,
 			);
 			path = DetailNote;
 			sourceTree = "<group>";
@@ -194,7 +272,11 @@
 		5A6503C6204AEAD000662973 /* AllNotes */ = {
 			isa = PBXGroup;
 			children = (
+				5A6503ED204B162200662973 /* NoteTableViewCell */,
 				5A6503CA204AEC4700662973 /* NotesViewController.swift */,
+				5A6503D0204AF11B00662973 /* NotesViewModel.swift */,
+				5A6503D2204AF19F00662973 /* NoteItemViewModel.swift */,
+				5A6503D8204AF3A700662973 /* NotesNavigator.swift */,
 			);
 			path = AllNotes;
 			sourceTree = "<group>";
@@ -202,8 +284,111 @@
 		5A6503C9204AEB6200662973 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				5A6503E8204B123E00662973 /* ActivityIndicator.swift */,
+				5A6503E7204B123E00662973 /* ErrorTracker.swift */,
+				5A6503E5204B123E00662973 /* Observable+Ext.swift */,
+				5A6503E6204B123E00662973 /* Reusable.swift */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		5A6503DA204AF50C00662973 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				5A6503DC204AF52600662973 /* UseCases */,
+				5A6503DB204AF51300662973 /* Models */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		5A6503DB204AF51300662973 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				5A6503DF204AF59700662973 /* Note.swift */,
+				5A6503E3204AF66000662973 /* Location.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		5A6503DC204AF52600662973 /* UseCases */ = {
+			isa = PBXGroup;
+			children = (
+				5A6503DD204AF54E00662973 /* UseCaseProvider.swift */,
+				5A6503E1204AF5BF00662973 /* NotesUseCase.swift */,
+			);
+			path = UseCases;
+			sourceTree = "<group>";
+		};
+		5A6503ED204B162200662973 /* NoteTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				5A6503EE204B164700662973 /* NoteTableViewCell.swift */,
+				5A6503EF204B164700662973 /* NoteTableViewCell.xib */,
+			);
+			path = NoteTableViewCell;
+			sourceTree = "<group>";
+		};
+		5A6503F6204C6C2A00662973 /* CoreDataPlatform */ = {
+			isa = PBXGroup;
+			children = (
+				5A65041A204CA2E800662973 /* Model.xcdatamodeld */,
+				5A6503FC204C6D5300662973 /* CoreDataStack.swift */,
+				5A6503FB204C6CA400662973 /* RxCoreData */,
+				5A6503FA204C6C9C00662973 /* Repository */,
+				5A6503F9204C6C7B00662973 /* Extensions */,
+				5A6503F7204C6C3400662973 /* Entities */,
+			);
+			path = CoreDataPlatform;
+			sourceTree = "<group>";
+		};
+		5A6503F7204C6C3400662973 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				5A650414204C73C400662973 /* CDNote+CoreDataClass.swift */,
+				5A650415204C73C400662973 /* CDNote+CoreDataProperties.swift */,
+				5A650416204C73C400662973 /* CDNote+Ext.swift */,
+				5A65040B204C6D8200662973 /* CDLocation+CoreDataClass.swift */,
+				5A65040C204C6D8200662973 /* CDLocation+CoreDataProperties.swift */,
+				5A65040A204C6D8200662973 /* CDLocation+Ext.swift */,
+				5A6503F8204C6C5600662973 /* Conversion */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		5A6503F8204C6C5600662973 /* Conversion */ = {
+			isa = PBXGroup;
+			children = (
+				5A650411204C6D8B00662973 /* DomainConvertibleType.swift */,
+				5A650410204C6D8B00662973 /* Persistable.swift */,
+			);
+			path = Conversion;
+			sourceTree = "<group>";
+		};
+		5A6503F9204C6C7B00662973 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				5A650406204C6D7500662973 /* NSManagedObjectContext+Ext.swift */,
+				5A650407204C6D7500662973 /* Observable+Ext_CoreData.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		5A6503FA204C6C9C00662973 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				5A650404204C6D6A00662973 /* Repository.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		5A6503FB204C6CA400662973 /* RxCoreData */ = {
+			isa = PBXGroup;
+			children = (
+				5A6503FF204C6D6200662973 /* ContextScheduler.swift */,
+				5A650400204C6D6200662973 /* FetchedResultsControllerEntityObserver.swift */,
+				5A6503FE204C6D6200662973 /* NSManagedObjectContext+Rx.swift */,
+			);
+			path = RxCoreData;
 			sourceTree = "<group>";
 		};
 		C83ACE2256C5C04E06D77338 /* Pods */ = {
@@ -333,6 +518,7 @@
 				5A65039F204AE6E600662973 /* LaunchScreen.storyboard in Resources */,
 				5A65039C204AE6E600662973 /* Assets.xcassets in Resources */,
 				5A650397204AE6E600662973 /* Main.storyboard in Resources */,
+				5A6503F1204B164700662973 /* NoteTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -451,11 +637,45 @@
 			buildActionMask = 2147483647;
 			files = (
 				5A6503C8204AEB1200662973 /* ViewModelType.swift in Sources */,
+				5A650426204D5C2400662973 /* DetailNoteNavigator.swift in Sources */,
+				5A650412204C6D8B00662973 /* Persistable.swift in Sources */,
+				5A650418204C73C400662973 /* CDNote+CoreDataProperties.swift in Sources */,
+				5A650424204D5C0200662973 /* DetailNoteViewModel.swift in Sources */,
+				5A6503D1204AF11B00662973 /* NotesViewModel.swift in Sources */,
+				5A650408204C6D7500662973 /* NSManagedObjectContext+Ext.swift in Sources */,
 				5A6503CB204AEC4700662973 /* NotesViewController.swift in Sources */,
+				5A6503F3204C608000662973 /* Application.swift in Sources */,
+				5A6503EB204B123E00662973 /* ErrorTracker.swift in Sources */,
+				5A6503DE204AF54E00662973 /* UseCaseProvider.swift in Sources */,
+				5A6503F0204B164700662973 /* NoteTableViewCell.swift in Sources */,
+				5A65040E204C6D8200662973 /* CDLocation+CoreDataClass.swift in Sources */,
+				5A65040F204C6D8200662973 /* CDLocation+CoreDataProperties.swift in Sources */,
+				5A6503D9204AF3A700662973 /* NotesNavigator.swift in Sources */,
+				5A650419204C73C400662973 /* CDNote+Ext.swift in Sources */,
+				5A650409204C6D7500662973 /* Observable+Ext_CoreData.swift in Sources */,
+				5A6503FD204C6D5300662973 /* CoreDataStack.swift in Sources */,
+				5A650405204C6D6A00662973 /* Repository.swift in Sources */,
+				5A650401204C6D6200662973 /* NSManagedObjectContext+Rx.swift in Sources */,
+				5A6503D3204AF1A000662973 /* NoteItemViewModel.swift in Sources */,
+				5A650403204C6D6200662973 /* FetchedResultsControllerEntityObserver.swift in Sources */,
+				5A650422204D4DDF00662973 /* AudioRecorder.swift in Sources */,
+				5A65041E204CB45800662973 /* CreateNoteViewModel.swift in Sources */,
+				5A6503E4204AF66000662973 /* Location.swift in Sources */,
 				5A650392204AE6E600662973 /* AppDelegate.swift in Sources */,
+				5A6503E0204AF59700662973 /* Note.swift in Sources */,
+				5A650402204C6D6200662973 /* ContextScheduler.swift in Sources */,
+				5A650420204CB46D00662973 /* CreateNoteNavigator.swift in Sources */,
+				5A6503EA204B123E00662973 /* Reusable.swift in Sources */,
+				5A65041C204CA2E800662973 /* Model.xcdatamodeld in Sources */,
+				5A650413204C6D8B00662973 /* DomainConvertibleType.swift in Sources */,
 				5A6503CD204AEEBA00662973 /* CreateNoteViewController.swift in Sources */,
-				5A65039A204AE6E600662973 /* challenge_iOSDev.xcdatamodeld in Sources */,
+				5A650417204C73C400662973 /* CDNote+CoreDataClass.swift in Sources */,
+				5A650428204D86D600662973 /* SpeechSynthesizer.swift in Sources */,
+				5A65040D204C6D8200662973 /* CDLocation+Ext.swift in Sources */,
 				5A6503CF204AEECA00662973 /* DetailNoteViewController.swift in Sources */,
+				5A6503E9204B123E00662973 /* Observable+Ext.swift in Sources */,
+				5A6503E2204AF5BF00662973 /* NotesUseCase.swift in Sources */,
+				5A6503EC204B123E00662973 /* ActivityIndicator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -759,13 +979,13 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		5A650398204AE6E600662973 /* challenge_iOSDev.xcdatamodeld */ = {
+		5A65041A204CA2E800662973 /* Model.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				5A650399204AE6E600662973 /* challenge_iOSDev.xcdatamodel */,
+				5A65041B204CA2E800662973 /* Model.xcdatamodel */,
 			);
-			currentVersion = 5A650399204AE6E600662973 /* challenge_iOSDev.xcdatamodel */;
-			path = challenge_iOSDev.xcdatamodeld;
+			currentVersion = 5A65041B204CA2E800662973 /* Model.xcdatamodel */;
+			path = Model.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};

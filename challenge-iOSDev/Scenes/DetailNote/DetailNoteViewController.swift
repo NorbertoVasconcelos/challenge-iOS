@@ -7,31 +7,45 @@
 //
 
 import UIKit
+import RxSwift
 
 class DetailNoteViewController: UIViewController {
 
+    @IBOutlet weak var btnListen: UIButton!
     @IBOutlet weak var btnDeleteNote: UIBarButtonItem!
+    @IBOutlet weak var tvSpeech: UITextView!
+    
+    var viewModel: DetailNoteViewModel?
+    private let disposeBag = DisposeBag()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        bindViewModel()
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    private func bindViewModel() {
+        
+        let input = DetailNoteViewModel.Input(deleteTrigger: btnDeleteNote.rx.tap.asDriver(),
+                                              speakTrigger: btnListen.rx.tap.asDriver())
+        let output = viewModel?.transform(input: input)
+        
+        output?
+            .note
+            .asObservable()
+            .subscribe(onNext: { [weak self] note in
+                self?.tvSpeech.text = note.body
+            })
+            .disposed(by: disposeBag)
+        
+        output?
+            .delete
+            .drive()
+            .disposed(by: disposeBag)
+        
+        output?
+            .speak
+            .drive()
+            .disposed(by: disposeBag)
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

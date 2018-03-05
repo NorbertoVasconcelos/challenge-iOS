@@ -13,7 +13,7 @@
         <!--Navigation Controller-->
         <scene sceneID="Obi-gr-fr0">
             <objects>
-                <navigationController id="dIq-en-XkX" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="NavigationController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="dIq-en-XkX" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="vzZ-MB-d2K">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -29,7 +29,7 @@
         <!--Notes-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="NotesViewController" customModule="challenge_iOSDev" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="NotesViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="NotesViewController" customModule="challenge_iOSDev" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -49,16 +49,13 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" title="Notes" id="s4Q-JN-PgV">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="s23-fc-bUg">
-                            <connections>
-                                <segue destination="zXj-WN-koT" kind="show" identifier="segueCreate" id="CoV-wg-F2x"/>
-                            </connections>
-                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="s23-fc-bUg"/>
                     </navigationItem>
                     <connections>
                         <outlet property="btnAddNote" destination="s23-fc-bUg" id="9Rx-fG-pY0"/>
                         <outlet property="tableView" destination="Kom-ed-XPv" id="b3e-IZ-AIG"/>
                         <segue destination="tPw-Pp-DMd" kind="show" identifier="segueDetail" id="4n5-wS-3N8"/>
+                        <segue destination="zXj-WN-koT" kind="show" identifier="segueCreate" id="ib1-jc-FQW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -68,11 +65,37 @@
         <!--Detail-->
         <scene sceneID="zdT-cK-Xmc">
             <objects>
-                <viewController id="tPw-Pp-DMd" customClass="DetailNoteViewController" customModule="challenge_iOSDev" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DetailNoteViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="tPw-Pp-DMd" customClass="DetailNoteViewController" customModule="challenge_iOSDev" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="oEW-eh-ceP">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Xo1-U7-MJd">
+                                <rect key="frame" x="16" y="80" width="343" height="511"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <inset key="scrollIndicatorInsets" minX="0.0" minY="16" maxX="0.0" maxY="0.0"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="98Y-La-Z63">
+                                <rect key="frame" x="0.0" y="607" width="375" height="60"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="0B5-lp-emS"/>
+                                </constraints>
+                                <state key="normal" title="Listen to note"/>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="98Y-La-Z63" firstAttribute="top" secondItem="Xo1-U7-MJd" secondAttribute="bottom" constant="16" id="2js-K9-Yxr"/>
+                            <constraint firstItem="DZc-3X-Zbr" firstAttribute="trailing" secondItem="Xo1-U7-MJd" secondAttribute="trailing" constant="16" id="6YR-sl-hS6"/>
+                            <constraint firstItem="98Y-La-Z63" firstAttribute="bottom" secondItem="DZc-3X-Zbr" secondAttribute="bottom" id="BN5-kv-WaS"/>
+                            <constraint firstItem="Xo1-U7-MJd" firstAttribute="leading" secondItem="DZc-3X-Zbr" secondAttribute="leading" constant="16" id="Mie-go-mJN"/>
+                            <constraint firstItem="98Y-La-Z63" firstAttribute="leading" secondItem="DZc-3X-Zbr" secondAttribute="leading" id="gC2-Mj-flB"/>
+                            <constraint firstItem="Xo1-U7-MJd" firstAttribute="top" secondItem="DZc-3X-Zbr" secondAttribute="top" constant="16" id="lxg-0Y-OBN"/>
+                            <constraint firstItem="98Y-La-Z63" firstAttribute="trailing" secondItem="DZc-3X-Zbr" secondAttribute="trailing" id="vjY-3c-3dm"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="DZc-3X-Zbr"/>
                     </view>
                     <navigationItem key="navigationItem" title="Detail" id="vOx-8d-e0L">
@@ -80,32 +103,72 @@
                     </navigationItem>
                     <connections>
                         <outlet property="btnDeleteNote" destination="aUB-df-PRB" id="MtO-sJ-g65"/>
+                        <outlet property="btnListen" destination="98Y-La-Z63" id="HVr-gA-dJC"/>
+                        <outlet property="tvSpeech" destination="Xo1-U7-MJd" id="cRf-iK-MWL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rcy-fm-sGE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="33" y="797"/>
+            <point key="canvasLocation" x="32.799999999999997" y="796.55172413793105"/>
         </scene>
         <!--Create Note-->
         <scene sceneID="KbE-Ve-DEN">
             <objects>
-                <viewController id="zXj-WN-koT" customClass="CreateNoteViewController" customModule="challenge_iOSDev" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CreateNoteViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="zXj-WN-koT" customClass="CreateNoteViewController" customModule="challenge_iOSDev" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="kdF-UX-J9W">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="zRB-T6-VkG">
+                                <rect key="frame" x="16" y="80" width="343" height="519"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="bK1-39-dfT">
+                                <rect key="frame" x="0.0" y="607" width="375" height="60"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CzR-sE-YPw">
+                                        <rect key="frame" x="0.0" y="0.0" width="187.5" height="60"/>
+                                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                        <state key="normal" title="Start Recording"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Pu-tl-K0j">
+                                        <rect key="frame" x="187.5" y="0.0" width="187.5" height="60"/>
+                                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                        <state key="normal" title="Pause"/>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="EBQ-RL-Hzz"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="zRB-T6-VkG" firstAttribute="leading" secondItem="6tf-3h-3r8" secondAttribute="leading" constant="16" id="6cJ-zh-0bU"/>
+                            <constraint firstItem="bK1-39-dfT" firstAttribute="top" secondItem="zRB-T6-VkG" secondAttribute="bottom" constant="8" id="Di9-Pc-lLd"/>
+                            <constraint firstItem="bK1-39-dfT" firstAttribute="bottom" secondItem="6tf-3h-3r8" secondAttribute="bottom" id="MTJ-oY-KMf"/>
+                            <constraint firstItem="bK1-39-dfT" firstAttribute="trailing" secondItem="6tf-3h-3r8" secondAttribute="trailing" id="YAT-Jl-4gS"/>
+                            <constraint firstItem="zRB-T6-VkG" firstAttribute="top" secondItem="6tf-3h-3r8" secondAttribute="top" constant="16" id="e23-e8-orP"/>
+                            <constraint firstItem="bK1-39-dfT" firstAttribute="leading" secondItem="6tf-3h-3r8" secondAttribute="leading" id="pGi-9b-q4e"/>
+                            <constraint firstItem="6tf-3h-3r8" firstAttribute="trailing" secondItem="zRB-T6-VkG" secondAttribute="trailing" constant="16" id="whC-Af-n8s"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6tf-3h-3r8"/>
                     </view>
                     <navigationItem key="navigationItem" title="Create Note" id="qlz-KA-jlh">
                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="2nj-10-Vlq"/>
                     </navigationItem>
                     <connections>
+                        <outlet property="btnPause" destination="9Pu-tl-K0j" id="V9v-4g-XX2"/>
+                        <outlet property="btnRecord" destination="CzR-sE-YPw" id="zsx-I8-RuU"/>
                         <outlet property="btnSaveNote" destination="2nj-10-Vlq" id="aXg-Oq-Hrq"/>
+                        <outlet property="tvSpeech" destination="zRB-T6-VkG" id="dZT-SS-O0Y"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uXL-nC-Qrg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="836" y="32"/>
+            <point key="canvasLocation" x="836" y="31.934032983508249"/>
         </scene>
     </scenes>
 </document>
