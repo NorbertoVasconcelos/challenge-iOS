@@ -64,7 +64,7 @@ final class CreateNoteViewModel: ViewModelType {
         }).disposed(by: disposeBag)
         
         let recording = input.recordTrigger.do(onNext: audioRecorder.start)
-        let pause = input.pauseTrigger.do(onNext: audioRecorder.stop)
+        let pause = input.pauseTrigger.do(onNext: audioRecorder.pause)
         
         let dismiss = Driver.of(save, input.cancelTrigger)
             .merge()
