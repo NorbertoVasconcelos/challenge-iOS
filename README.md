@@ -1,4 +1,4 @@
-# ELSA Challenge for iOS Developers
+# Challenge for iOS Developers
 
 ## Problem 
 Create a Voice Note application that records audio and transcribes it to text. A location is captured for each note.
