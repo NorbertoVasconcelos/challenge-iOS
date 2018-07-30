@@ -50,7 +50,6 @@ final class CreateNoteViewModel: ViewModelType {
             return Note(body: $0[1], title: $0[0], location: $1)
         }
         
-        
         let save = input.saveTrigger.withLatestFrom(createdNote)
             .flatMapLatest { [weak self] in
                 return (self?.createNoteUseCase.save(note: $0)

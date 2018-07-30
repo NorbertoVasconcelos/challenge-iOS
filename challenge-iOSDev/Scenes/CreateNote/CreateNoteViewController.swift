@@ -38,8 +38,6 @@ class CreateNoteViewController: UIViewController {
         
         keyboardToolbar.items = [btn]
         tvSpeech.inputAccessoryView = keyboardToolbar
-        
-        
     }
 
     private func bindViewModel() {
